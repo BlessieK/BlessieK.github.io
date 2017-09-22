@@ -1,0 +1,904 @@
+<!DOCTYPE html>
+<html lang="en"/>
+
+<head>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Blessie Kurapati">
+    <meta name="author" content="J. Rangel, Web Developer">
+
+    <title>Blessie Kurapati</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--<link rel="stylesheet" href="css/animate.css">-->
+
+
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css">
+
+
+    <!-- Custom CSS -->
+    <style>
+
+        @import url(//fonts.googleapis.com/css?family=Pathway+Gothic+One);
+        @import url(//fonts.googleapis.com/css?family=Dancing+Script);
+        @import url(//fonts.googleapis.com/css?family=Playfair+Display);
+        @import url(//fonts.googleapis.com/css?family=Times+New+Roman);
+
+        body {
+            background-color: whitesmoke;
+            /*padding-top: 70px;*/
+            /*width: 100%;*/
+            /*margin: auto;*/
+            /*padding-left: 2vw;*/
+            /*padding-right: 2vw;*/
+            /*padding-bottom: 0;*/
+            /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
+        }
+
+        #navbar {
+            font-family: "Playfair Display";
+            text-decoration: none;
+            color: black;
+            list-style: none;
+            height: 8vh;
+            width: 100%;
+            font-size: 1vw;
+            margin: 0;
+        }
+
+        .ontop {
+            position: relative;
+            z-index: 10;
+        }
+
+        ul.topnav {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            /*background-color: peachpuff;*/
+            background-color: black;
+        }
+
+        h1{
+            font-family:"Dancing Script";
+            font-size:8vw;
+        }
+
+
+        ul.topnav li {
+            float: left;
+            margin-right: 1%;
+            font-size: 1.2em;
+            margin-top: 0.3%;
+            margin-bottom: 0.2%;
+            margin-left: 2%;
+            color: white;
+        }
+
+        #hometab{
+            display: none;
+        }
+        #abouttab{
+            display: none;
+        }
+        #Bblog {
+            display: none;
+        }
+        #bookstab {
+            display: none;
+        }
+        #speakingtab {
+            display: none;
+        }
+        #wwmtab {
+            display: none;
+        }
+        #contacttab {
+             display: none;
+         }
+
+        p {
+            font-size: 1.8vw;
+            font-family: "Pathway Gothic One";
+            text-align: center;
+            margin: 0 3% 0 3%;
+        }
+
+        a {
+            text-align: center;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        .navbar {
+            position: relative;
+            min-height: 0px;
+            margin-bottom: 0vw;
+            border: 1px solid transparent;
+        }
+
+        .nav > li > a {
+            /*position: relative;*/
+            /*display: block;*/
+            padding: 1vw;
+
+        }
+
+        #Bblog {
+            text-decoration: none;
+
+            color: white;
+        }
+
+        #topheader {
+            font-size: 8.5em;
+            font-family: "Dancing Script";
+            text-align: center;
+            color: darksgrey;
+        }
+
+        #video {
+            width: 80%;
+            height: 70%;
+            margin-left: 9vw;
+            margin-bottom: 1.5vw;
+        }
+
+        .navbar-inverse .navbar-toggle {
+            border-color: white;
+        }
+
+        .navbar-inverse .navbar-nav > li > a {
+            color: white;
+        }
+
+        #titles {
+            font-family: "Playfair Display";
+
+        }
+
+        .navbar {
+            font-family: "Playfair Display";
+            color: white;
+        }
+
+        .navbar-inverse {
+            background-color: grey;
+            border-color: white;
+        }
+
+        #copyright {
+
+            padding: 0;
+
+            text-align: center;
+            font-family: "Playfair Display";
+            list-style: none;
+            float: left;
+            clear: left;
+            margin-left: 34vw;
+        }
+
+        .container-fluid > .navbar-collapse, .container-fluid > .navbar-header, .container > .navbar-collapse, .container > .navbar-header {
+            margin-right: -4px;
+            margin-left: -15px;
+        }
+
+        .box {
+            height: 45.5vh;
+            width: 27vw;
+            /*border: 5px solid coral;*/
+            border: 5px solid black;
+        }
+
+        #toppic1 {
+            /*border: 5px solid coral;*/
+            background-image: url("img/b1.jpg");
+            background-size: cover;
+            filter: grayscale(120%);
+            margin: 0 1vw 1vw 7%;
+            float: left;
+        }
+
+        #toppic1:hover {
+
+            filter: grayscale(0%)
+        }
+
+        #toppic2 {
+            /*position: relative;*/
+            margin: 0 1vw 1vw 0%;
+            /*border: 5px solid coral;*/
+            background-image: url(img/cross2.jpg);
+            background-size: cover;
+            filter: grayscale(120%);
+            float: left;
+        }
+
+        #toppic2:hover {
+
+            filter: grayscale(0%)
+        }
+
+        #toppic3 {
+
+
+            background-image: url("img/speaking.png");
+            background-size: cover;
+            filter: grayscale(120%);
+            float: left;
+            /*clear:left;*/
+            margin: 0 1vw 1vw 0%;
+
+        }
+
+        #toppic3:hover {
+            filter: grayscale(0%)
+        }
+
+        #toppic4 {
+            background-image: url("img/b3.jpg");
+            margin: 0 1vw 1vw 7%;
+            /*background-image: url("img/speaking.png");*/
+            background-size: cover;
+            filter: grayscale(120%);
+            float: left;
+            clear: left;
+        }
+
+        #toppic4:hover {
+
+            filter: grayscale(0%)
+        }
+
+        #toppic5 {
+            margin: 0 1vw 1vw 0%;
+            /*border: 5px solid coral;*/
+            background-image: url("img/blog.jpg");
+            background-size: cover;
+            filter: grayscale(120%);
+            float: left;
+
+        }
+
+        #toppic5:hover {
+
+            filter: grayscale(0%)
+        }
+
+        #contactpic {
+            height: 30vw;
+            margin-left:29%;
+        }
+
+        #toppic6 {
+
+            background-image: url("img/b6.PNG");
+            background-size: cover;
+            filter: grayscale(120%);
+            float: left;
+        }
+
+        #toppic6:hover {
+
+            filter: grayscale(0%)
+        }
+
+        #blog {
+            color: white;
+            font-size: 2em;
+            display: none;
+            text-align: center;
+            font-family: "Dancing Script";
+        }
+
+        #aboutBlessie {
+            color: white;
+            display: none;
+            font-size: 2em;
+            font-family: "Dancing Script";
+            text-align: center;
+        }
+
+        #books {
+            color: white;
+            display: none;
+            font-size: 2em;
+            font-family: "Dancing Script";
+            text-align: center;
+        }
+
+        #testimony {
+            color: white;
+            font-size: 2em;
+            display: none;
+            font-family: "Dancing Script";
+            text-align: center;
+        }
+
+        #contact {
+            color: white;
+            display: none;
+            font-size: 2em;
+            font-family: "Dancing Script";
+            text-align: center;
+        }
+
+        #worthy {
+            color: white;
+            font-size: 2em;
+            display: none;
+            font-family: "Dancing Script";
+            text-align: center;
+        }
+
+        #booksauthoredcontainer {
+            display: none;
+        }
+
+        #testimonycontainer {
+            display: none;
+        }
+
+        #aboutmecontainer {
+            display: none;
+        }
+
+        #contactinfocontainer {
+            display: none;
+        }
+
+        #wwmcontainer {
+            display: none;
+        }
+
+        #aboutmecontainer {
+            height: 800vh;
+            width: 80vw;
+            top: 40%;
+            display: none;
+        }
+
+        #aboutMeinfo {
+            /*position: absolute;*/
+            /*width: 80vw;*/
+            height: auto;
+            font-size: 1.7em;
+            font-family: "Pathway Gothic One";
+            text-align: center;
+        }
+
+        #speakingpicdiv {
+            margin: 0;
+            width: 74%;
+        }
+
+        #instagram {
+            height: 1.7vw;
+            margin-top: 1vw;
+            margin-bottom: 1vw;
+            float: left;
+            margin-left: 1vw;
+            list-style: none;
+        }
+
+        #facebook {
+            height: 1.5vw;
+            margin-top: 1.15vw;
+            margin-bottom: 1vw;
+            float: left;
+            margin-left: 1vw;
+            list-style: none;
+        }
+
+        #email {
+            height: 1.2vw;
+            margin-top: 1.3vw;
+            /*margin-bottom: 1vw;*/
+            list-style: none;
+            margin-left: 47vw;
+            clear: left;
+            float: left;
+
+        }
+
+        #bookspic {
+            height: 30vw;
+            margin-top: 2vw;
+            margin-left: 22.5vw;
+        }
+
+        #blessiespeakingpic {
+            height: 30vw;
+            margin-left: 23vw;
+        }
+        #copyright2  {
+            margin-left:3vw;
+            font-size: 1.5vw;
+            clear: left;
+        }
+
+        #MI {
+            height:16vw;
+            margin-left:41.5%;
+            border-radius: 9vw;
+        }
+
+        @media only screen  and (max-width: 1366px) {
+            .box {
+                height: 43vw;
+                width: 42.5vw;
+
+            }
+            #toppic3 {
+                margin-top: 1.5vw;
+                margin-left: 7%;
+                /*float: left;*/
+            }
+
+            #toppic6 {
+                margin-top: 1.5vw;
+                margin-left: 0vw;
+            }
+
+            #toppic4 {
+                margin: 1.5vw 1vw 1vw 0;
+                clear: none;
+            }
+
+            #toppic5{
+                margin: 1.5vw 1vw 1vw 7vw;
+            }
+
+
+            ul.topnav li {
+                float: inherit;
+                margin-right: 1%;
+                font-size: 4.4vw;
+                margin-top: 0.3%;
+                margin-bottom: 0.2%;
+                margin-left: 2%;
+                color: white;
+            }
+
+            #copyright {
+                padding: 0;
+                text-align: center;
+                font-family: "Playfair Display";
+                list-style: none;
+                float: left;
+                clear: left;
+                margin-left: 19vw;
+            }
+            p {
+                font-size: 4vw;
+                font-family: "Pathway Gothic One";
+                text-align: center;
+                margin: 0 3% 0 3%;
+            }
+            #instagram {
+                height: 4.6vw;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                float: left;
+                margin-left: 1vw;
+                list-style: none;
+            }
+            #email {
+                height: 4vw;
+                margin-top: 1.3vw;
+                /* margin-bottom: 1vw; */
+                list-style: none;
+                margin-left: 41vw;
+                clear: left;
+                float: left;
+            }
+            h1 {
+                font-family: "Dancing Script";
+                font-size: 15vw;
+            }
+
+            #facebook {
+                height: 4.4vw;
+                margin-top: 1.15vw;
+                margin-bottom: 1vw;
+                float: left;
+                margin-left: 1vw;
+                list-style: none;
+            }
+            #copyright2 {
+                margin-left: -1vw;
+                font-size: 2.5vw;
+                clear: left;
+            }
+
+        }
+
+        @media only screen  and (max-width: 737px) {
+
+            .box {
+                height: 60.5vw;
+                width: 85vw;
+                /*margin: 1.5vw 1vw 1vw 8%;*/
+            }
+
+            h1 {
+                font-family: "Dancing Script";
+                font-size: 23vw;
+                margin-top: 6vw;
+            }
+
+            #copyright2 {
+                margin-left: 3vw;
+                font-size: 5vw;
+                clear: left;
+            }
+
+
+
+            #toppic1 {
+                margin-top: 1.5vw;
+                margin-left: 8%;
+            }
+
+            #toppic2 {
+                margin-top: 1.5vw;
+                margin-left: 8%;
+            }
+
+            #toppic6 {
+                margin-top: 1.5vw;
+                margin-left: 8%;
+            }
+            #toppic4 {
+                margin-top: 1.5vw;
+                margin-left: 8%;
+                float: left;
+            }
+            #toppic5 {
+                margin: 1.5vw 1vw 1vw 8%;
+            }
+
+            #toppic3 {
+                margin-top: 1.5vw;
+                margin-left: 8%;
+            }
+
+            #email {
+                height: 7vw;
+                margin-left: 36vw;
+                margin-top: 1vw;
+                margin-bottom: 1vw;
+                margin-right: 2vw;
+            }
+
+            #facebook {
+                height: 7vw;
+                margin-left: 1vw;
+            }
+
+            #instagram {
+                height: 7.4vw;
+                margin-left: 1vw;
+                margin-right: 2vw;
+            }
+
+            p {
+                font-size: 9vw;
+            }
+
+            #video {
+                margin-left: 0vw;
+                margin-bottom: 0vw;
+                width: 100%;
+                height: 400;
+            }
+
+            #navbar {
+                width: 100%;
+                font-size: 6vw;
+            }
+
+            ul.topnav li {
+                float: inherit;
+                font-size: 1.2em;
+                /*margin-top: 0.5%;*/
+                margin-bottom: 0.1%;
+                margin-left: 4%;
+            }
+
+            #topheader {
+                margin-top: 11%;
+                /*margin: 6vw 0% 0% 0%;*/
+                font-size: 29vw;
+
+            }
+
+            #copyright {
+                margin-left: 0%;
+            }
+
+            #titles {
+                font-family: "Playfair Display";
+                font-size: 5vw;
+            }
+
+            #bookspic {
+                height: 50vw;
+                margin-left: 4vw;
+            }
+
+            #blessiespeakingpic {
+                height: 54vw;
+                margin-left: 1vw;
+            }
+
+        }
+
+        /*end of 736 media query*/
+
+        }
+
+
+    </style>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body>
+
+
+
+<div id="navbar">
+
+    <ul class="topnav ontop">
+        <li class="ontop" id="menutab">Menu</li>
+        <li class="ontop" id="hometab">Home</li>
+        <li class="ontop" id="abouttab">About</li>
+        <li><a class="blogtab" id="Bblog" href="http://www.blessiekay.Wordpress.com">Blog</a></li>
+        <li class="ontop" id="speakingtab">Speaking</li>
+        <li class="ontop" id="bookstab">Books</li>
+        <li class="ontop" id="wwmtab">Worthy Worldwide Ministry</li>
+        <li class="ontop" id="contacttab">Contact</li>
+    </ul>
+
+</div>
+
+
+<!-- Page Content -->
+
+
+<div class="col-lg-12 animated text-center">
+    <h1 style="margin-bottom:0px; id="topheader">Blessie Kurapati</h1>
+    <p id="titles">BELIEVER | SPEAKER | HUMAN SERVICES COUNSELOR | WRITER</p>
+    <hr width="58%">
+    <br>
+</div>
+
+
+<div id="homepage">
+    <div>
+        <div>
+            <div class="box" id="toppic1">
+                <p id="aboutBlessie">About Blessie</p>
+            </div>
+
+            <div class="box" id="toppic2">
+                <p id="contact">Contact Her</p>
+            </div>
+
+            <div class="box" id="toppic3">
+                <p id="testimony">Speaking</p>
+            </div>
+
+            <div class="box" id="toppic4">
+                <!--<p id="testimony">Speaking</p>-->
+                <p id="worthy">Worthy Worldwide Ministries</p>
+            </div>
+
+            <a href="http://www.blessiekay.Wordpress.com">
+                <div class="box" id="toppic5">
+                    <p id="blog">Blessie's Blog</p>
+              </div>
+            </a>
+
+            <div class="box" id="toppic6">
+                <p id="books">Books</p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+<!--</div>-->
+
+
+<!-- /.row -->
+
+
+<container id="contactinfocontainer">
+    <div id="contactdivinfo">
+        <p>Contact Blessie</p>
+        <!--<p>Email: <a href="mailto:blessiekurapati@gmail.com">blessiekurapati@gmail.com</a></p>-->
+        <!--<p>Press icon to go to Blessie's Instagram</p>-->
+        <!--<a href="https://www.instagram.com/blessiekay/?hl=en"><img src="img/insta.svg" id="instagram"></a>-->
+        <!--<p>Press the icon to go to Blessie's Facebook</p>-->
+        <!--<a href="https://www.facebook.com/blessiekay"><img src="img/fb.svg" id="fb"></a>-->
+    </div>
+    <div class="col-lg-12">
+        <img style="text-align: center" src="img/blog.jpg" id="contactpic">
+    </div>
+
+
+    <div class="col-lg-12">
+        <p>Speaking Inquiries: <a href="mailto:blessiekurapati@gmail.com">blessiekurapati@gmail.com</a></p>
+        <p>For Booking: <a href="mailto:Booking@themiagency.com">Booking@themiagency.com</a> or call: 210-239-8502</p>
+       <img  src="img/MI.JPG" id="MI">
+    </div>
+
+
+</container>
+
+<container id="aboutmecontainer">
+    <div id="aboutMeinfo">
+
+        <br>
+        <p id="aboutmepara">Hi! Welcome to my tiny corner of the interwebs!
+            My name is Blessie Kurapati. I am an Indian-American missionary currently residing in San Antonio,
+            Texas. I was born in India and lived in Saudi Arabia with my family for the first ten years of my life. In Saudi
+            Arabia, it is illegal to practice Christianity and any proclamation of faith other than Islam is
+            punishable by death. Therefore, I was a Bible smuggler as part of an underground church movement in the 90s. Having
+            experienced God’s faithfulness and protection, I came to faith in Jesus Christ at the age of 10 in an
+            old underground, sound-proofed house church.
+            <br>
+            <br>
+            My family relocated to America in 2002, where I got to experience the freedom of worshipping Jesus
+            Christ
+            out loud without any fear of persecution. In 2013, I answered the call to ministry. Currently, I lead a
+            woman’s fellowship in San Antonio—helping young women find their identities in Jesus Christ. I travel
+            and
+            speak nationally and internationally—using my testimony to encourage Believers to fearlessly spread the
+            Gospel.
+            <br>
+            <br>
+            I am a two-time Liberty University graduate with a Masters in Human Services Counseling- Marriage and
+            Family
+            Therapy. I am also the Founder & CEO of Worthy Worldwide Ministries, Inc., an organization through
+            which,
+            food, shelter, and Christian counseling is provided to unreached Indian orphans to fight against
+            sex-trafficking and child labor.
+            In my spare time, I love reading, <a href="http://www.blessiekay.Wordpress.com">blogging</a>, hiking,
+            and taking road trips with family and friends.
+
+            Now that you know a little about me, I would love to learn about you!
+            Come say hi at <a href="mailto:blessiekurapati@gmail.com">blessiekurapati@gmail.com</a>, <a
+                    href="https://www.instagram.com/blessiekay/?hl=en">my Instagram account</a> or <a
+                    href="https://www.facebook.com/blessiekay">my Facebook!</a></p>
+    </div>
+    <br>
+    <br>
+    <div id="video">
+        <video id="video" controls>
+            <source src="video/blessie.MOV" type="video/mp4">
+            <!--<source src="movie.ogg" type="video/ogg">-->
+        </video>
+    </div>
+
+</container>
+
+<container id="testimonycontainer">
+    <div id="testimonyinfodiv">
+        <p>I grew up in Saudi Arabia, where I was restricted from speaking about my faith in Jesus Christ because it
+            is
+            against the law. I believe the Lord delivered me out of that situation so that I can boldly speak about
+            His
+            love and goodness all over the world.
+            If you would like for me to speak at your event contact me at: <a
+                    href="mailto:blessiekurapati@gmail.com">blessiekurapati@gmail.com</a>
+            <br>
+            <br>
+        <div id="speakingpicdiv"><img id="blessiespeakingpic" src="img/bspeaking.jpg"></div>
+        <br>
+        <p>
+            SPEAKING ENGAGEMENTS - SUMMER 2017
+        </p>
+        <br>
+        <br>
+        <p>
+            April 29-31, 2017: Tx Congresso Change Makers Conference (Waco, TX)
+            <br>
+            June 25-26, 2017: <a href="https://www.facebook.com/shinegirlsministry">Shine Conference</a> (San Antonio,
+            TX)
+            <br>
+            July 7-9, 2017: <a href="http://www.xodusproject.org/">Relentless Xodus Project Conference</a> (Corpus
+            Christi, TX)
+            <br>
+            July 21-22, 2017: <a href="http://thereelconference.net/">Reel Conference</a> (San Antonio, Texas)
+        </p>
+        <br>
+        </p>
+    </div>
+
+</container>
+
+
+<container id="booksauthoredcontainer">
+    <div id="booksauthoredinfo">
+        <br>
+        <p>I am cooking up something wonderful! I can’t wait to share this piece of my heart with you!
+        </p>
+        <img id="bookspic" src="img/speaking.png">
+    </div>
+
+</container>
+
+
+<container id="wwmcontainer">
+    <div id="wwminfo">
+        <p>WORTHY WORLDWIDE MINISTRIES...
+            <br>
+            <span id="comingsoon">coming soon!</span></p>
+
+        <p>Worthy Worldwide Ministries, Inc., an organization through which, food, shelter, and Christian counseling
+            is
+            provided to unreached Indian orphans to fight against sex-trafficking and child labor.
+            <!--We can add an area that says “Donate to the Cause” and make it link it to worthy’s bank account eventually. I would like to add an option to retrieve reoccurring payment “Become a Financial Partner”.…just throwing idea out.-->
+            <!--[Links directly to worthyworldwideministries.org when it’s done]-->
+            <br>
+            <br>
+            <!--**Insert API Here**-->
+        </p>
+    </div>
+
+</container>
+
+
+<!--</div>-->
+
+<ul class=" list-unstyled">
+    <li><a href="mailto:blessiekurapati@gmail.com"><img src="img/email.svg" id="email"></a></li>
+
+    <li><a href="https://www.instagram.com/blessiekay/?hl=en"><img src="img/insta.svg" id="instagram"></a></li>
+
+    <li><a href="https://www.facebook.com/blessiekay"><img src="img/fb.svg" id="facebook"></a></li>
+    <!--<li id="copyright">© 2017 —Blessie Kurapati. All Rights Reserved. Site created by-->
+        <!--<a href="https://jsr7.github.io/">Josh Rangel</a></li>-->
+</ul>
+
+<footer   >
+    <p id="copyright2"> Copyright 2017 - Blessie Kurapati. All Rights Reserved. Site Created by
+        <a href="https://jsr7.github.io/">Josh Rangel</a></p>
+</footer>
+
+<!-- /.container -->
+
+<!-- jQuery Version 1.11.1 -->
+<!--<script src="js/jquery.js"></script>-->
+<script
+        src="https://code.jquery.com/jquery-3.2.1.min.js"
+        integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+        crossorigin="anonymous">
+
+</script>
+<script src="js/jquery.js"></script>
+<script src="js/index.js"></script>
+
+<!--Bootstrap Core JavaScript -->
+<script src="js/bootstrap.js"></script>
+
+</body>
+</html>
